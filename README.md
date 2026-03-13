@@ -2,6 +2,10 @@
 
 A high-performance, memory-efficient data export engine that streams large datasets (10M+ rows) into multiple formats: **CSV**, **JSON**, **XML**, and **Parquet**. Built with Node.js, Express, PostgreSQL, and Docker.
 
+## Demo Video
+
+Watch the project demo here: https://drive.google.com/file/d/1wh9Q8fcuNiVux822LAdIJKGr7Q5mFpF3/view?usp=sharing
+
 ## Architecture
 
 ```
@@ -59,6 +63,8 @@ docker-compose up --build
 ```
 
 The application will be available at `http://localhost:8080`.
+
+If `8080` is already in use on your machine, set `HOST_PORT` in `.env` before starting Docker. For example, `HOST_PORT=8081` publishes the app at `http://localhost:8081` while the container still listens on `8080`.
 
 ## API Documentation
 

@@ -32,13 +32,13 @@ services:
     build: .
     container_name: export-engine-app
     ports:
-      - "8080:8080"
+      - "${HOST_PORT:-8080}:${PORT:-8080}"
     depends_on:
       db:
         condition: service_healthy
     environment:
       - DATABASE_URL=postgresql://user:password@db:5432/exports_db
-      - PORT=8080
+      - PORT=${PORT:-8080}
       - NODE_ENV=production
       - LOG_LEVEL=info
       - EXPORT_BATCH_SIZE=5000
